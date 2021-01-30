@@ -4,21 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerMovementController : MonoBehaviour
+public class PlayerMovementController : MovementController
 {
-	#region serialized
-	[SerializeField]
-    [GetComponent(typeof(Rigidbody))]
-    private Rigidbody _rigidbody;
-
-    [Header("Movement")]
-    [SerializeField]
-    private float _moveSpeed = 1f;
-
-    [SerializeField]
-    private float _haltDuration = .1f;
-
-    [Header("Jump")]
+	[Header("Jump")]
     [SerializeField]
     private float _jumpHeight = 2f;
     [SerializeField]
@@ -27,75 +15,25 @@ public class PlayerMovementController : MonoBehaviour
     private float _taperDuration = 0.5f;
     [SerializeField]
     private float _hangDuration = 0.1f;
-
-    [Header("Grounded")]
-    [SerializeField]
-    private Vector3 _groundedBoxHalfExtents = new Vector3(0.5f, 0.5f, 0.1f);
-
-    [Header("Events")]
-    [SerializeField]
-    public UnityEvent OnMoveLeft;
-    [SerializeField]
-    public UnityEvent OnMoveRight;
-    [SerializeField]
-    public UnityEvent OnStandStill;
     [SerializeField]
     public UnityEvent OnJump;
 
-    [Serializable]
-    public class OnIsGroundedChangedEvent : UnityEvent<bool> { }
-    [SerializeField]
-    public OnIsGroundedChangedEvent OnIsGroundedChanged;
-    #endregion
+	protected override bool ShouldMoveLeft()
+	{
+        return Input.GetKey(KeyCode.A);
+    }
 
-    #region private
-    private bool _wasGrounded = false;
-	#endregion
-
-	void Update()
+	protected override bool ShouldMoveRight()
     {
-        UpdateMovement();
+        return Input.GetKey(KeyCode.D);
+    }
 
-        bool grounded = IsGrounded();
-        if (grounded != _wasGrounded)
-		{
-            _wasGrounded = grounded;
-            OnIsGroundedChanged.Invoke(grounded);
-		}
-
-        if (grounded && Input.GetKeyDown(KeyCode.Space))
+	protected override void Update()
+    {
+        base.Update();
+        if (_wasGrounded && Input.GetKeyDown(KeyCode.Space))
             StartCoroutine(JumpRoutine());
     }
-
-    private bool IsGrounded()
-	{
-        return Physics.CheckBox(transform.position, _groundedBoxHalfExtents, Quaternion.identity, LayerMask.GetMask(TagsAndLayers.Layers.GROUND));
-	}
-
-    private void UpdateMovement()
-	{
-        var velocity = _rigidbody.velocity;
-        if (Input.GetKey(KeyCode.A))
-        {
-            velocity.x = -_moveSpeed;
-            _rigidbody.velocity = velocity;
-            OnMoveLeft?.Invoke();
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            velocity.x = _moveSpeed;
-            _rigidbody.velocity = velocity;
-            OnMoveRight?.Invoke();
-        }
-        else //dampen our x velocity over haltDuration
-        {
-            float speed = velocity.x >= 0 ? _moveSpeed : -_moveSpeed;
-            velocity.x = Mathf.Lerp(speed, 0f, 1f - (velocity.x / speed) + (Time.deltaTime / _haltDuration));
-            _rigidbody.velocity = velocity;
-            OnStandStill?.Invoke();
-        }
-    }
-
 
     //I personally like a "video game" jump and a physics engine fall
     //This coroutine turns off gravity and manually takes care of the jump
