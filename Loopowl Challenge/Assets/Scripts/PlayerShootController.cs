@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerShootController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class PlayerShootController : MonoBehaviour
 
     private float _timer = 0f;
 
+    [SerializeField]
+    public UnityEvent OnShoot;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && _timer <= 0f)
@@ -28,5 +32,6 @@ public class PlayerShootController : MonoBehaviour
     private void Shoot()
 	{
         Instantiate(_shotPrefab, _spawnPosition.position, Quaternion.identity);
+        OnShoot?.Invoke();
 	}
 }

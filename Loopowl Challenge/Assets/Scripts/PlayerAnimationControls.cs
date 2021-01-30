@@ -24,6 +24,11 @@ public class PlayerAnimationControls : MonoBehaviour
 		_animator.SetBool("IsGrounded", value);
 	}
 
+	public void DoShoot()
+	{
+		_animator.SetTrigger("DoShoot");
+	}
+
 	private void Update()
 	{
 		//face left or right
