@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 2623251101393476256}
   - component: {fileID: 2623251101393476263}
   - component: {fileID: 2116306624963862476}
+  - component: {fileID: -2679188169952779079}
   m_Layer: 10
   m_Name: Plasma Ball
   m_TagString: Untagged
@@ -124,6 +125,20 @@ MonoBehaviour:
   _rigidbody: {fileID: 2623251101393476256}
   _transform: {fileID: 2623251101393476257}
   _initSpeed: 30
+--- !u!114 &-2679188169952779079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623251101393476262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df823bc9b953884e99ef04d86415d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxBounces: 1
+  _maxGroundStays: 10
 --- !u!1001 &2623251101507129021
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -31,8 +31,6 @@ public class PlayerMovementController : MonoBehaviour
     [Header("Grounded")]
     [SerializeField]
     private Vector3 _groundedBoxHalfExtents = new Vector3(0.5f, 0.5f, 0.1f);
-    [SerializeField]
-    private string _groundLayer = "Ground";
 
     [Header("Events")]
     [SerializeField]
@@ -71,7 +69,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private bool IsGrounded()
 	{
-        return Physics.CheckBox(transform.position, _groundedBoxHalfExtents, Quaternion.identity, LayerMask.GetMask(_groundLayer));
+        return Physics.CheckBox(transform.position, _groundedBoxHalfExtents, Quaternion.identity, LayerMask.GetMask(TagsAndLayers.Layers.GROUND));
 	}
 
     private void UpdateMovement()

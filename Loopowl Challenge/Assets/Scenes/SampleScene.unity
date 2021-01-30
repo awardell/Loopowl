@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 415067189}
   m_Layer: 9
   m_Name: Geometry
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2136,6 +2136,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5503424185621719056, guid: 6de6d0d99a30ad34590408c05615d12b, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503424185621719056, guid: 6de6d0d99a30ad34590408c05615d12b, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5503424185621719059, guid: 6de6d0d99a30ad34590408c05615d12b, type: 3}
