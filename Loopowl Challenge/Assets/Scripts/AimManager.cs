@@ -8,6 +8,8 @@ public class AimManager : MonoBehaviour
 
 	public Vector3 Target { get; private set; } = Vector3.zero;
 
+	public Vector3 ScreenTarget { get; private set; } = Vector3.zero;
+
 	[SerializeField]
 	private Camera _camera;
 
@@ -30,6 +32,7 @@ public class AimManager : MonoBehaviour
 		var screenPoint = Input.mousePosition;
 		screenPoint.x = Mathf.Clamp(screenPoint.x, bottomLeft.x, topRight.x);
 		screenPoint.y = Mathf.Clamp(screenPoint.y, bottomLeft.y, topRight.y);
+		ScreenTarget = screenPoint;
 
 		//get the position we're targeting
 		Ray ray = _camera.ScreenPointToRay(screenPoint);
