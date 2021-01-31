@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: -2679188169952779079}
   m_Layer: 10
   m_Name: Plasma Ball
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df823bc9b953884e99ef04d86415d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _despawnFXPrefab: {fileID: 0}
   _maxBounces: 1
   _maxGroundStays: 10
 --- !u!1001 &2623251101507129021

@@ -20,8 +20,8 @@ public class RagdollActivator : MonoBehaviour
     [SerializeField]
     public Rigidbody[] rigidbodiesToActivate;
 
-	//[SerializeField]
-	//public Rigidbody gameplayRigidbody; //needed?
+	[SerializeField]
+	public Rigidbody gameplayRigidbody;
 
 	public void Activate()
 	{
@@ -45,9 +45,18 @@ public class RagdollActivator : MonoBehaviour
             col.enabled = false;
 		}
 
+        gameplayRigidbody.constraints &= ~RigidbodyConstraints.FreezePositionZ;
+        gameplayRigidbody.constraints &= ~RigidbodyConstraints.FreezeRotation;
+
+        //ensure the body falls off the stage
+        var sidewaysLaunchVector = Random.Range(0, 2) == 0 ? Vector3.forward : Vector3.back;
+        sidewaysLaunchVector *= 3f;
+        gameplayRigidbody.velocity += sidewaysLaunchVector;
+
         foreach (var rig in rigidbodiesToActivate)
 		{
             rig.isKinematic = false;
+            rig.velocity = gameplayRigidbody.velocity;
 		}
 	}
 }

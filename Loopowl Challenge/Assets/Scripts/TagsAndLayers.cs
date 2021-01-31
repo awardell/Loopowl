@@ -6,6 +6,7 @@ public static class TagsAndLayers
 		public const string PLAYER = "Player";
 		public const string GROUND = "Ground";
 		public const string ENEMY = "Enemy";
+		public const string DAMAGE = "Damage";
 	}
 
 	public static class Layers
