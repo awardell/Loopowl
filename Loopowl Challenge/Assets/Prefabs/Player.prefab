@@ -3430,7 +3430,7 @@ GameObject:
   - component: {fileID: 5503424185621719062}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3495,12 +3495,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 5503424185621719057}
   _moveSpeed: 5
   _haltDuration: 0.1
-  _jumpHeight: 2
-  _jumpSpeed: 20
-  _taperDuration: 0.1
-  _hangDuration: 0.1
   _groundedBoxHalfExtents: {x: 0.4, y: 0.1, z: 0.4}
-  _groundLayer: Ground
   OnMoveLeft:
     m_PersistentCalls:
       m_Calls: []
@@ -3510,13 +3505,13 @@ MonoBehaviour:
   OnStandStill:
     m_PersistentCalls:
       m_Calls: []
-  OnJump:
+  OnIsGroundedChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5503424185520151331}
         m_TargetAssemblyTypeName: PlayerAnimationControls, Assembly-CSharp
-        m_MethodName: DoJump
-        m_Mode: 1
+        m_MethodName: SetIsGrounded
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3525,13 +3520,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnIsGroundedChanged:
+  _jumpHeight: 2
+  _jumpSpeed: 20
+  _taperDuration: 0.1
+  _hangDuration: 0.1
+  OnJump:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5503424185520151331}
         m_TargetAssemblyTypeName: PlayerAnimationControls, Assembly-CSharp
-        m_MethodName: SetIsGrounded
-        m_Mode: 0
+        m_MethodName: DoJump
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
