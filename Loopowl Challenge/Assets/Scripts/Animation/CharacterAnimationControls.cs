@@ -26,7 +26,7 @@ public abstract class CharacterAnimationControls : MonoBehaviour
 
 	protected abstract Vector3 GetTarget();
 
-	private void Update()
+	protected virtual void Update()
 	{
 		//face left or right
 		if (GetTarget().x < _transform.position.x)

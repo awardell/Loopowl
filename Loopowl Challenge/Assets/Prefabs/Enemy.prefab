@@ -116,14 +116,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591291290157099388}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0.030843573, y: 0.030843573, z: 0.7064338, w: 0.7064338}
   m_LocalPosition: {x: -33.4, y: -0, z: -24.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 591291290940313381}
   m_Father: {fileID: 591291291319157755}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 5, z: 90}
 --- !u!33 &591291290157099385
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   - {fileID: 591291291309616135}
   - {fileID: 2021070701341917992}
   - {fileID: 1894719747419020098}
+  - {fileID: 183362456}
   collidersToActivate:
   - {fileID: 591291291319132094}
   - {fileID: 591291291319132044}
@@ -412,19 +413,7 @@ MonoBehaviour:
   _shootDelay: 0
   OnShoot:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2021070701341917992}
-        m_TargetAssemblyTypeName: CharacterAnimationControls, Assembly-CSharp
-        m_MethodName: DoShoot
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _target: {fileID: 1572923367}
   _cooldown: 2
 --- !u!1 &591291291319131745

@@ -11,4 +11,10 @@ public class EnemyAnimationControls : CharacterAnimationControls
 	{
 		return _aimTarget.Target;
 	}
+
+	protected override void Update()
+	{
+		base.Update();
+		_animator.SetBool("IsAiming", _aimTarget.HasTargeting);
+	}
 }
