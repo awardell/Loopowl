@@ -3,21 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerShootController : MonoBehaviour
+public class PlayerShootController : ShootController
 {
-    [SerializeField]
-    private Transform _spawnPosition;
-
-    [SerializeField]
-    private GameObject _shotPrefab;
-
     [SerializeField]
     private float _cooldown = .5f;
 
     private float _timer = 0f;
-
-    [SerializeField]
-    public UnityEvent OnShoot;
 
     void Update()
     {
@@ -28,10 +19,4 @@ public class PlayerShootController : MonoBehaviour
         }
         _timer -= Time.deltaTime;
     }
-
-    private void Shoot()
-	{
-        Instantiate(_shotPrefab, _spawnPosition.position, Quaternion.identity);
-        OnShoot?.Invoke();
-	}
 }

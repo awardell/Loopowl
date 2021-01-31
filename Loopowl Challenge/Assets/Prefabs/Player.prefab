@@ -3704,7 +3704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPosition: {fileID: 5503424184822565762}
   _shotPrefab: {fileID: 2623251101393476262, guid: 26cbb18e1b4460d4eafdbf2b9d7a76b1, type: 3}
-  _cooldown: 0.3
+  _shootDelay: 0.03
   OnShoot:
     m_PersistentCalls:
       m_Calls:
@@ -3720,6 +3720,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _cooldown: 0.3
 --- !u!114 &5503424185621719062
 MonoBehaviour:
   m_ObjectHideFlags: 0
