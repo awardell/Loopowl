@@ -15,5 +15,6 @@ public static class TagsAndLayers
 		public const string PLAYER_SHOT = "PlayerShot";
 		public const string GROUND = "Ground";
 		public const string ENEMY = "Enemy";
+		public const string ENEMY_SHOT = "EnemyShot";
 	}
 }

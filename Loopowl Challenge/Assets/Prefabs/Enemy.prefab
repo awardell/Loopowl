@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 591291291214916785}
   - component: {fileID: 1409242369402345381}
   - component: {fileID: 7126189851037441441}
+  - component: {fileID: 183362456}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -394,6 +395,38 @@ MonoBehaviour:
   - {fileID: 9180798272533057223}
   - {fileID: 3902933787609718253}
   - {fileID: 1411221197442300441}
+--- !u!114 &183362456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591291291214916791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f147b6a846f28545994b93c89c90ed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPosition: {fileID: 591291290940313381}
+  _shotPrefab: {fileID: 2989245794611762528, guid: 89befa837fa37714e9e9d9e58b69d311, type: 3}
+  _shootDelay: 0
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2021070701341917992}
+        m_TargetAssemblyTypeName: CharacterAnimationControls, Assembly-CSharp
+        m_MethodName: DoShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _target: {fileID: 1572923367}
+  _cooldown: 2
 --- !u!1 &591291291319131745
 GameObject:
   m_ObjectHideFlags: 0

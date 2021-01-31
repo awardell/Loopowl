@@ -45,6 +45,11 @@ public class EnemyAimTarget : MonoBehaviour
 		if (other.tag == TagsAndLayers.Tags.PLAYER)
 		{
 			_targeting = other.transform;
+
+			var realTarget = _targeting.GetComponent<TargetTransform>(); //aim at the chest
+			if (realTarget != null && realTarget.target != null)
+				_targeting = realTarget.target;
+
 			_targetingTimer = _targetingDurationFalloff;
 		}
 	}
