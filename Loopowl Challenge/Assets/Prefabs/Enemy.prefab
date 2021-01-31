@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1572923365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1572923366}
+  - component: {fileID: 1572923368}
+  - component: {fileID: 1572923367}
+  m_Layer: 11
+  m_Name: Zone of Awareness
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1572923366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572923365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 591291291214916788}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1572923368
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572923365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 11
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1572923367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572923365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c978a982e19654e4b9f22e73560266e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _zoneOfAwareness: {fileID: 1572923368}
+  _rigidbody: {fileID: 591291291214916790}
+  _targetingDurationFalloff: 0.2
 --- !u!1 &591291289599599165
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +214,7 @@ GameObject:
   - component: {fileID: 591291291214916788}
   - component: {fileID: 591291291214916789}
   - component: {fileID: 591291291214916790}
-  - component: {fileID: 591291291214916787}
+  - component: {fileID: 1894719747419020098}
   - component: {fileID: 591291291214916785}
   - component: {fileID: 1409242369402345381}
   - component: {fileID: 7126189851037441441}
@@ -177,6 +237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 591291289599599164}
+  - {fileID: 1572923366}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -210,20 +271,20 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 120
   m_CollisionDetection: 1
---- !u!114 &591291291214916787
+--- !u!114 &1894719747419020098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591291291214916791}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d34df9462fc004f8253db6dbf32e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e9b24b8ff48fe4478235ae1c5f54e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 591291291214916790}
-  _moveSpeed: 5
+  _moveSpeed: 2
   _haltDuration: 0.1
   _groundedBoxHalfExtents: {x: 0.4, y: 0.1, z: 0.4}
   OnMoveLeft:
@@ -237,38 +298,9 @@ MonoBehaviour:
       m_Calls: []
   OnIsGroundedChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 591291291319132036}
-        m_TargetAssemblyTypeName: PlayerAnimationControls, Assembly-CSharp
-        m_MethodName: SetIsGrounded
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _jumpHeight: 2
-  _jumpSpeed: 20
-  _taperDuration: 0.1
-  _hangDuration: 0.1
-  OnJump:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 591291291319132036}
-        m_TargetAssemblyTypeName: PlayerAnimationControls, Assembly-CSharp
-        m_MethodName: DoJump
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  _patrolArea: {fileID: 0}
+  _movementDirection: 0
 --- !u!114 &591291291214916785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +316,8 @@ MonoBehaviour:
   behavioursToActivate: []
   behavioursToDeactivate:
   - {fileID: 591291291309616135}
-  - {fileID: 591291291319132036}
-  - {fileID: 591291291214916787}
+  - {fileID: 2021070701341917992}
+  - {fileID: 1894719747419020098}
   collidersToActivate:
   - {fileID: 591291291319132094}
   - {fileID: 591291291319132044}
@@ -897,7 +929,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.08479493, y: 0.40214667, z: 18.864206}
+  m_ConnectedAnchor: {x: 0.08479398, y: 0.4021408, z: 18.864206}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1021,7 +1053,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.08524113, y: 0.4020683, z: -18.864197}
+  m_ConnectedAnchor: {x: 0.085242085, y: 0.40207416, z: -18.864197}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1145,7 +1177,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -27.553036, y: -7.0794506, z: -32.327106}
+  m_ConnectedAnchor: {x: -27.55304, y: -7.079445, z: -32.327106}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1269,7 +1301,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -27.553255, y: -7.0794334, z: 32.32709}
+  m_ConnectedAnchor: {x: -27.553253, y: -7.079439, z: 32.32709}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1387,7 +1419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 591291291319157669}
   - component: {fileID: 591291291309616135}
-  - component: {fileID: 591291291319132036}
+  - component: {fileID: 2021070701341917992}
   m_Layer: 11
   m_Name: Polyart_Mesh
   m_TagString: Untagged
@@ -1402,7 +1434,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591291291319132037}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1414,7 +1446,7 @@ Transform:
   - {fileID: 591291291319157715}
   m_Father: {fileID: 591291289599599164}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &591291291309616135
 Animator:
   serializedVersion: 3
@@ -1425,7 +1457,7 @@ Animator:
   m_GameObject: {fileID: 591291291319132037}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 860793eb3324391468f1c120a75ec049, type: 3}
-  m_Controller: {fileID: 9100000, guid: 549f23692ea90dd41bb109ee526ec5f4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 530f0b042ade9bb45be11432467a3385, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1434,21 +1466,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &591291291319132036
+--- !u!114 &2021070701341917992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591291291319132037}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca6c43fd6208d94896b550216499b60, type: 3}
+  m_Script: {fileID: 11500000, guid: 98d01813834e50445a226917f469e686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 591291291309616135}
   _transform: {fileID: 591291289599599164}
   _rigidbody: {fileID: 591291291214916790}
+  _aimTarget: {fileID: 1572923367}
 --- !u!1 &591291291319132039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,7 +2364,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.666958, y: 0.0000009536743, z: 0.000011086464}
+  m_ConnectedAnchor: {x: -33.666958, y: 0.000004529953, z: -0.00000035762787}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2687,7 +2720,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.437305, y: 0.00000667572, z: -0.00001001358}
+  m_ConnectedAnchor: {x: -33.437305, y: 0.00000667572, z: -0.000012397766}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2811,7 +2844,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.43685, y: 0.00000667572, z: 0.0000052452087}
+  m_ConnectedAnchor: {x: -33.436848, y: 0.00000667572, z: 0.000002861023}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2935,7 +2968,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.666946, y: -0.000006198883, z: 0.000010848045}
+  m_ConnectedAnchor: {x: -33.666943, y: -0.000004529953, z: -0.00000500679}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:

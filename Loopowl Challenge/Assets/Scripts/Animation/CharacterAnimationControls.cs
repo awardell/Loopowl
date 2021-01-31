@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimationControls : MonoBehaviour
+public abstract class CharacterAnimationControls : MonoBehaviour
 {
 	[SerializeField]
 	[GetComponent(typeof(Animator))]
-	private Animator _animator;
+	protected Animator _animator;
 
 	[SerializeField]
-	private Transform _transform;
+	protected Transform _transform;
 
 	[SerializeField]
-	private Rigidbody _rigidbody;
-
-	public void DoJump()
-	{
-		_animator.SetTrigger("DoJump");
-	}
+	protected Rigidbody _rigidbody;
 
 	public void SetIsGrounded(bool value)
 	{
@@ -29,10 +24,12 @@ public class PlayerAnimationControls : MonoBehaviour
 		_animator.SetTrigger("DoShoot");
 	}
 
+	protected abstract Vector3 GetTarget();
+
 	private void Update()
 	{
 		//face left or right
-		if (AimManager.Instance.Target.x < _transform.position.x)
+		if (GetTarget().x < _transform.position.x)
 		{
 			//facing left
 			_transform.rotation = Quaternion.Euler(0f, 180f, 0f);
@@ -51,6 +48,6 @@ public class PlayerAnimationControls : MonoBehaviour
 	private void OnAnimatorIK(int layerIndex)
 	{
 		_animator.SetLookAtWeight(1f, 1f, 1f, 1f); //Does this need to be every IK update?
-		_animator.SetLookAtPosition(AimManager.Instance.Target);
+		_animator.SetLookAtPosition(GetTarget());
 	}
 }
