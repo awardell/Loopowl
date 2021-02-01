@@ -5455,7 +5455,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.025235714, y: -0.00000001427946, z: 3.6046713e-10, w: 0.99968153}
+  m_LocalRotation: {x: 0.025235713, y: -0.00000002985097, z: 7.535505e-10, w: 0.99968153}
   m_LocalPosition: {x: 0, y: 2.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6271,7 +6271,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396256424}
-  m_LocalRotation: {x: 0.025235714, y: -0.00000001427946, z: 3.6046713e-10, w: 0.99968153}
+  m_LocalRotation: {x: 0.025235713, y: -0.00000002985097, z: 7.535505e-10, w: 0.99968153}
   m_LocalPosition: {x: 0, y: 2.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8032,6 +8032,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 881886969}
     m_Modifications:
+    - target: {fileID: 781629963, guid: 83ff8331067eb6c4b982b16c0c67b069, type: 3}
+      propertyPath: MaxDistance
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 781629963, guid: 83ff8331067eb6c4b982b16c0c67b069, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 781629963, guid: 83ff8331067eb6c4b982b16c0c67b069, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1877623404, guid: 83ff8331067eb6c4b982b16c0c67b069, type: 3}
       propertyPath: _target
       value: 
