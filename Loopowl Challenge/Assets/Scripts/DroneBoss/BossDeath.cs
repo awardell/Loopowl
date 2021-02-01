@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BossDeath : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class BossDeath : MonoBehaviour
     [SerializeField]
     private Vector3 _torqueImpulse = new Vector3(100f, 0f, 300f);
 
+    [SerializeField]
+    public UnityEvent OnDeath;
+
     public void CommenceDeath()
 	{
         _rigidbody.useGravity = true;
@@ -23,11 +27,6 @@ public class BossDeath : MonoBehaviour
         foreach (var comp in _toDisable)
             comp.enabled = false;
 
-        StartCoroutine(DeathRoutine());
+        OnDeath?.Invoke();
 	}
-
-    private IEnumerator DeathRoutine()
-	{
-        yield return new WaitForSeconds(3f);
-    }
 }

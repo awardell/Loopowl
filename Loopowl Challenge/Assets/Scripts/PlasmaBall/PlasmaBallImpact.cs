@@ -49,6 +49,8 @@ public class PlasmaBallImpact : MonoBehaviour
 	//to allow the projectile to provide its impulse
 	private IEnumerator DespawnRoutine()
 	{
+		Instantiate(_despawnFXPrefab, transform.position, Quaternion.identity);
+
 		yield return new WaitForSeconds(.02f);
 		Destroy(gameObject);
 	}

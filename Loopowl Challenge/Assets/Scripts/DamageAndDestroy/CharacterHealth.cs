@@ -24,4 +24,9 @@ public class CharacterHealth : MonoBehaviour
         if (_curHealth <= 0)
             OnHealthDepleted?.Invoke();
 	}
+
+    public int GetCurHealth()
+	{
+        return _curHealth;
+	}
 }
