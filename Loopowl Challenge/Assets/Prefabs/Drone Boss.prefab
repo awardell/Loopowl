@@ -235,6 +235,7 @@ MonoBehaviour:
   - {fileID: 7922655291079167053}
   - {fileID: 7922655290823482263}
   - {fileID: 7922655291079167058}
+  - {fileID: 1877623404}
   _torqueImpulse: {x: 40, y: 0, z: -50}
 --- !u!114 &7922655291079167049
 MonoBehaviour:
