@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &518260673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518260674}
+  m_Layer: 11
+  m_Name: ShotSpawnTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518260674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518260673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 1.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7922655291543926035}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7922655289520251353
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,6 +78,7 @@ GameObject:
   - component: {fileID: 7922655291079167054}
   - component: {fileID: 7922655291079167049}
   - component: {fileID: 4614731759972500117}
+  - component: {fileID: 1877623404}
   m_Layer: 11
   m_Name: Drone Boss
   m_TagString: Enemy
@@ -171,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c80c95b08ac88d47a5d25998b878782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startHealth: 4
+  _startHealth: 30
   OnHealthDepleted:
     m_PersistentCalls:
       m_Calls:
@@ -249,6 +280,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: GameWin
+--- !u!114 &1877623404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7922655291079167057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f147b6a846f28545994b93c89c90ed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPosition: {fileID: 518260674}
+  _shotPrefab: {fileID: 2989245794611762528, guid: 4df2d065e04396d4093e2a56259e4710, type: 3}
+  _shootDelay: 0
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls: []
+  _target: {fileID: 0}
+  _cooldown: 2
 --- !u!64 &7922655290823482266
 MeshCollider:
   m_ObjectHideFlags: 0

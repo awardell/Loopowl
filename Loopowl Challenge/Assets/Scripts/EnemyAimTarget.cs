@@ -36,10 +36,13 @@ public class EnemyAimTarget : MonoBehaviour
 		}
 		else
 		{
-			if (_rigidbody.velocity.sqrMagnitude > .01f)
-				Target = _rigidbody.transform.position + (_rigidbody.velocity.normalized * LOOKAHEAD);
-			else
-				Target = _rigidbody.transform.position + Vector3.left * LOOKAHEAD;
+			if (_rigidbody != null)
+			{
+				if (_rigidbody.velocity.sqrMagnitude > .01f)
+					Target = _rigidbody.transform.position + (_rigidbody.velocity.normalized * LOOKAHEAD);
+				else
+					Target = _rigidbody.transform.position + Vector3.left * LOOKAHEAD;
+			}
 		}
 	}
 
