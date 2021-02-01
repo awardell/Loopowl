@@ -8,7 +8,7 @@ public class DestroyAllTrigger : MonoBehaviour
 	{
 		var handler = other.GetComponent<DestroyHandler>();
 		if (handler != null)
-			handler.DoDestroy();
+			handler.PerformDestroy();
 		else
 			Destroy(other.gameObject);
 	}

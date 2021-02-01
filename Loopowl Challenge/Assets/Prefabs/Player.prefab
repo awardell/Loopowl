@@ -218,7 +218,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -21.090734, y: -0.0000014901161, z: 0}
+  m_ConnectedAnchor: {x: -21.090681, y: 0.00032782555, z: 0}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -266,6 +266,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151234
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +682,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -27.553255, y: -7.0794487, z: 32.32709}
+  m_ConnectedAnchor: {x: -27.553238, y: -7.079153, z: 32.32709}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -726,6 +730,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151258
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +810,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -27.55304, y: -7.079464, z: -32.327106}
+  m_ConnectedAnchor: {x: -27.553026, y: -7.079157, z: -32.327106}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -850,6 +858,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151260
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +938,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.08524018, y: 0.4020624, z: -18.864197}
+  m_ConnectedAnchor: {x: 0.08521156, y: 0.4018859, z: -18.864197}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -974,6 +986,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1066,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.08479206, y: 0.40212902, z: 18.864206}
+  m_ConnectedAnchor: {x: 0.08476345, y: 0.40195253, z: 18.864206}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1098,6 +1114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1399,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,7 +1803,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.666958, y: 0.000001847744, z: 0.0000076293945}
+  m_ConnectedAnchor: {x: -33.666943, y: 0.0000019073486, z: 0.0002837181}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1827,6 +1851,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1931,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.666946, y: -0.000006198883, z: 0.000010848045}
+  m_ConnectedAnchor: {x: -33.666924, y: -0.000006198883, z: -0.00028824806}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1951,6 +1979,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,7 +2059,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.436848, y: 0.00000667572, z: 0.000002861023}
+  m_ConnectedAnchor: {x: -33.436855, y: 0, z: -0.0001912117}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2075,6 +2107,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,7 +2187,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.43731, y: 0.00000667572, z: -0.000002861023}
+  m_ConnectedAnchor: {x: -33.43731, y: 0.0000009536743, z: 0.00017786026}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2199,6 +2235,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _root: {fileID: 8969936732647589888}
   _children: []
+  _dontDestroy: 0
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5503424185520151326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,6 +3620,8 @@ GameObject:
   - component: {fileID: 5503424185621719062}
   - component: {fileID: 8969936732647589888}
   - component: {fileID: 1847116467}
+  - component: {fileID: 2505786370015604473}
+  - component: {fileID: 758970805617050063}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -3789,6 +3831,22 @@ MonoBehaviour:
   - {fileID: 5767574738592904331}
   - {fileID: 1268468405809615647}
   - {fileID: 2278376752592293138}
+  _dontDestroy: 1
+  OnDestroyPerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 758970805617050063}
+        m_TargetAssemblyTypeName: LoadSceneBehaviour, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1847116467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3801,7 +3859,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d645458df58246f4c96760f76e4d2561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDie:
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2505786370015604473}
+        m_TargetAssemblyTypeName: CharacterHealth, Assembly-CSharp
+        m_MethodName: Damage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2505786370015604473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503424185621719056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c80c95b08ac88d47a5d25998b878782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startHealth: 3
+  OnHealthDepleted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5503424185621719062}
@@ -3816,3 +3902,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 758970805617050063}
+        m_TargetAssemblyTypeName: LoadSceneBehaviour, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &758970805617050063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503424185621719056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0b7bf09ba24844996a2d12c1e72087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

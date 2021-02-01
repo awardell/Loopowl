@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DestroyHandler : MonoBehaviour
 {
@@ -9,20 +10,29 @@ public class DestroyHandler : MonoBehaviour
 	[SerializeField]
 	private DestroyHandler[] _children;
 
+	[SerializeField]
+	private bool _dontDestroy = false;
+
+	[SerializeField]
+	private UnityEvent OnDestroyPerformed;
+
 	private bool _handle = true;
-	public void DoDestroy()
+	public void PerformDestroy()
 	{
 		if (_handle)
 		{
 			if (_root != null)
-				_root.DoDestroy();
+				_root.PerformDestroy();
 			else
 			{
 				foreach (var child in _children)
 				{
 					child._handle = false;
 				}
-				Destroy(gameObject);
+				if (!_dontDestroy)
+					Destroy(gameObject);
+
+				OnDestroyPerformed?.Invoke();
 			}
 		}
 	}
