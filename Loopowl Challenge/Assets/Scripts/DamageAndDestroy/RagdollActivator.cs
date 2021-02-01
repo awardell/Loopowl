@@ -45,6 +45,7 @@ public class RagdollActivator : MonoBehaviour
             col.enabled = false;
 		}
 
+        //We want the ragdoll to be able to rotate freely and move in z space
         gameplayRigidbody.constraints &= ~RigidbodyConstraints.FreezePositionZ;
         gameplayRigidbody.constraints &= ~RigidbodyConstraints.FreezeRotation;
 

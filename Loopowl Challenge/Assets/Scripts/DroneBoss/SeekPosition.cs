@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Lerps a rigidbody gradually towards a target position using Rigidbody.MovePosition
 public class SeekPosition : MonoBehaviour
 {
 	[SerializeField]

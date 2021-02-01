@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Manages where the user is aiming on the screen
 public class AimManager : MonoBehaviour
 {
 	public static AimManager Instance { get; private set; } = null;

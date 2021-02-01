@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Tweens the pitch and volume of a sound to give an effect
+//like deactivating a machine
 public class SoundTweenOff : MonoBehaviour
 {
 	[SerializeField]
