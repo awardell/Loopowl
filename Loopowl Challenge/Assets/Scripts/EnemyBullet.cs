@@ -12,12 +12,8 @@ public class EnemyBullet : MonoBehaviour
 
 	private void Start()
 	{
-		var player = GameObject.FindGameObjectWithTag("Player"); //we should really hold this in a manager, adam
-		var target = player?.GetComponent<TargetTransform>()?.target;
-		if (target != null)
-		{
-			_rigidbody.velocity = (target.position - transform.position).normalized * _speed;
-		}
+		var target = PlayerReferences.Instance.playerTarget;
+		_rigidbody.velocity = (target.position - transform.position).normalized * _speed;
 	}
 
 	private void OnCollisionEnter(Collision collision)

@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d645458df58246f4c96760f76e4d2561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDie:
+  OnTakeDamage:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 591291291214916785}
@@ -415,7 +415,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _target: {fileID: 1572923367}
-  _cooldown: 2
+  _cooldown: 0.5
 --- !u!1 &591291291319131745
 GameObject:
   m_ObjectHideFlags: 0

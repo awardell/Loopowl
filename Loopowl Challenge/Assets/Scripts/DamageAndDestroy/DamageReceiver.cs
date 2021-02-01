@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class DamageReceiver : MonoBehaviour
 {
 	[SerializeField]
-	public UnityEvent OnDie;
+	[FormerlySerializedAs("OnDie")]
+	public UnityEvent OnTakeDamage;
 
 	private void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.tag == TagsAndLayers.Tags.DAMAGE)
 		{
-			Die();
+			TakeDamage();
 		}
 	}
 
-	private void Die()
+	private void TakeDamage()
 	{
-		OnDie?.Invoke();
+		OnTakeDamage?.Invoke();
 	}
 }

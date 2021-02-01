@@ -36,7 +36,10 @@ public class EnemyAimTarget : MonoBehaviour
 		}
 		else
 		{
-			Target = _rigidbody.transform.position + (_rigidbody.velocity.normalized * LOOKAHEAD);
+			if (_rigidbody.velocity.sqrMagnitude > .01f)
+				Target = _rigidbody.transform.position + (_rigidbody.velocity.normalized * LOOKAHEAD);
+			else
+				Target = _rigidbody.transform.position + Vector3.left * LOOKAHEAD;
 		}
 	}
 
@@ -44,12 +47,7 @@ public class EnemyAimTarget : MonoBehaviour
 	{
 		if (other.tag == TagsAndLayers.Tags.PLAYER)
 		{
-			_targeting = other.transform;
-
-			var realTarget = _targeting.GetComponent<TargetTransform>(); //aim at the chest
-			if (realTarget != null && realTarget.target != null)
-				_targeting = realTarget.target;
-
+			_targeting = PlayerReferences.Instance.playerTarget;
 			_targetingTimer = _targetingDurationFalloff;
 		}
 	}

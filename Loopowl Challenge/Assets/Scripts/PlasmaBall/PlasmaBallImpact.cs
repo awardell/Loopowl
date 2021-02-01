@@ -42,6 +42,14 @@ public class PlasmaBallImpact : MonoBehaviour
 
 	private void Despawn()
 	{
+		StartCoroutine(DespawnRoutine());
+	}
+
+	//We need to wait a smidge before despawning
+	//to allow the projectile to provide its impulse
+	private IEnumerator DespawnRoutine()
+	{
+		yield return new WaitForSeconds(.02f);
 		Destroy(gameObject);
 	}
 }
